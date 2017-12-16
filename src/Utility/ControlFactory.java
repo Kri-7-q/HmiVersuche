@@ -9,7 +9,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 import java.util.Random;
 
@@ -52,6 +55,15 @@ public class ControlFactory {
         }
 
         return tableView;
+    }
+
+    // Static
+    // Get an image view object.
+    static public Node imageView(String path) {
+        Image img = new Image(path);
+        ImageView imgView = new ImageView(img);
+
+        return imgView;
     }
 
 }
